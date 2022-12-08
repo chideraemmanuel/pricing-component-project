@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(240, 78%, 98%);
+  background-image: url(../images/bg-top.svg);
+  background-repeat: no-repeat;
+  background-position: top 0 right 0;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(../images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 0 left 0;
+  z-index: -3;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+span {
+  display: inline-block;
+}
+
+body h2 {
+  font-size: 2rem;
+  color: hsl(233, 13%, 49%);
+  margin-bottom: 30px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  color: hsl(234, 14%, 74%);
+}
+
+.toggle-icon {
+  display: inline-block;
+  /* background-color: hsl(237, 63%, 64%); */
+  background: linear-gradient(45deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  width: 40px;
+  height: 25px;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.toggle-icon:hover {
+  opacity: 0.7;
+}
+
+.toggle-icon::before {
+  content: "";
+  position: absolute;
+  /* inset: 3px; */
+  left: 18px;
+  top: 3px;
+  bottom: 3px;
+  width: 50%;
+  height: 80%;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.toggle-icon.active::before {
+  left: 3px;
+}
+
+.grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+.card {
+  padding: 30px 20px;
+  background-color: #fff;
+  box-shadow: 0 3px 50px rgba(0, 0, 0, 0.2);
+  color: rgb(44, 44, 44);
+}
+
+.left-card {
+  border-radius: 10px 0 0 10px;
+}
+
+.right-card {
+  border-radius: 0 10px 10px 0;
+}
+
+.center-card {
+  background: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: #fff;
+  border-radius: 10px;
+  transform: scaleY(1.1);
+}
+
+.plan-type {
+  margin-bottom: 30px;
+}
+
+.plan-features {
+  margin: 20px 0;
+}
+
+.card p {
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+}
+
+.card p span:first-child {
+  font-size: 2.5rem;
+  align-self: center;
+  padding-right: 3px;
+}
+
+.card li {
+  border-bottom: 1px hsla(234, 14%, 74%, 0.5) solid;
+  padding: 10px 70px;
+}
+
+.card li:first-child {
+  border-top: 1px hsl(234, 14%, 74%, 0.5) solid;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #fff;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 7px;
+  color: hsl(237, 63%, 64%);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    to bottom right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  color: #fff;
+  transition: all 0.2s linear;
+  border: 1px hsl(237, 63%, 64%) solid;
+}
+
+.btn-primary:hover {
+  background: #fff;
+  color: hsl(237, 63%, 64%);
+}
+
+.btn-light {
+  border: 1px #fff solid;
+  transition: all 0.1s linear;
+}
+
+.btn-light:hover {
+  color: #fff;
+  background: transparent;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10%;
+}
