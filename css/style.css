@@ -219,4 +219,9 @@ body h2 {
     position: relative;
     margin: 20px;
   }
+
+  .left-card,
+  .right-card {
+    border-radius: 10px;
+  }
 }
