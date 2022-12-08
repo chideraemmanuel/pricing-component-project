@@ -99,6 +99,7 @@ body h2 {
 }
 
 .card {
+  display: inline-block;
   padding: 30px 20px;
   background-color: #fff;
   box-shadow: 0 3px 50px rgba(0, 0, 0, 0.2);
@@ -192,6 +193,29 @@ body h2 {
 }
 
 .attribution {
-  position: absolute;
-  bottom: 10%;
+  position: relative;
+  margin-top: 5%;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  body {
+    height: 100%;
+    padding-top: 30px;
+    background-position: top -30px right -150px;
+  }
+
+  .bg {
+    display: none;
+  }
+
+  .attribution {
+    position: relative;
+    margin: 20px;
+  }
 }
